@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imageSlider</title>
+    <style>
+    fieldset{
+        size:100%;
+        position:absolute;
+        align-items: center;
+        font-size: 0.8em;
+        padding: 1em;
+       
+    }
+    button{
+            margin-left:40% ;
+            border-radius: 0.3em solid #ccc;
+            float: right;
+        }
+        img{
+            float:left;
+            max-width: 200px;
+        }
+    </style>
+    <script>
+        let pic=["pic1.jpg","pic2.jpg","pic3.jpg","pic4.jpg","pic5.jpg","pic6.jpg","pic7.jpg","pic8.jpg","pic9.jpg","pic10.jpg","pic11.jpg"];
+        function nextImage(){
+            let c=pic[Math.floor(Math.random() * 9)];
+            document.getElementById("next").src=c;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Image Slider</legend>
+        <img id="next"  src="pic1.jpg">
+        <button onclick="nextImage()">Click Here</button>
+    </fieldset>
+</body>
+</html>
